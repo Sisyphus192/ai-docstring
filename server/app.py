@@ -146,20 +146,20 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="")
     parser.add_argument(
         "--max_source_length",
-        default=512,
+        default=1024,
         type=int,
         help="The maximum total source sequence length after tokenization. Sequences longer "
         "than this will be truncated, sequences shorter will be padded.",
     )
     parser.add_argument(
         "--max_target_length",
-        default=128,
+        default=256,
         type=int,
         help="The maximum total target sequence length after tokenization. Sequences longer "
         "than this will be truncated, sequences shorter will be padded.",
     )
     parser.add_argument(
-        "--beam_size", default=10, type=int, help="beam size for beam search"
+        "--beam_size", default=20, type=int, help="beam size for beam search"
     )
     parser.add_argument("--no_cuda", action='store_true', help="Avoid using CUDA when available")
 
